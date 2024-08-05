@@ -55,7 +55,7 @@ const NavigationDots = () => {
     <Box
       sx={{
         position: "fixed",
-        right: 20,
+        right: { xs: '50%', sm: 30 },
         top: "50%",
         transform: "translateY(-50%)",
         display: "flex",

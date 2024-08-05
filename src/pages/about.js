@@ -56,23 +56,30 @@ const AnimatedAvatars = styled(Box)`
 function About() {
   return (
     <>
-    <Box sx={{position:"relative", bottom:'100px', left:'15px'}}>
-    <SocialMedia />
-    </Box>
-   
+      <Box sx={{ position: "relative", bottom: "100px", left: "15px" }}>
+        <SocialMedia />
+      </Box>
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
-          ml: 35,
-          mt:-20
+          justifyContent: "center", 
+          width: "100%", 
+ 
         }}
       >
-        
+        <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column" ,
+          alignItems: "center",
+
+        }}
+      >
         <Stack direction="row" spacing={2} alignItems="center">
           <AnimatedBox>
-            <Box sx={{ fontSize: "3rem", ml:-15}}>👋</Box>
+            <Box sx={{ fontSize: "3rem", ml: -15 }}>👋</Box>
             <Box sx={{ mt: -8, ml: 5 }}>
               <Typography variant="body1">Hello, I am</Typography>
               <Typography variant="h4" sx={{ fontWeight: 600 }}>
@@ -120,13 +127,14 @@ function About() {
         }}
       >
         <img
-          src="https://solely-resume.netlify.app/static/media/profile.ee489764521abe34026b.png"
+          src="/images/profile.png"
           alt="profile_bg"
           style={{
             position: "absolute",
+            left:-20,
             zIndex: 1,
-            width:'84%',
-            height:'100%'
+            width: "100%",
+            height: "100%",
           }}
         />
         <AnimatedImage
@@ -136,16 +144,42 @@ function About() {
       </Box>
 
       <AnimatedAvatars
-        sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "row", md: "column" }, 
+    flexWrap: "wrap",
+          justifyContent: "center",
+        }}
       >
-        <Avatar src="/images/1.png" alt="html" sx={{width:'5rem', height:'5rem', bgcolor:'white', padding: 1}}/>
-        <Avatar src="/images/2.png" alt="css" sx={{width:'5rem', height:'5rem', bgcolor:'white', padding: 1}}/>
-        <Avatar src="/images/3.png" alt="javascript" sx={{width:'5rem', height:'5rem', bgcolor:'white', padding: 1}} />
-        <Avatar src="/images/4.png" alt="react" sx={{width:'5rem', height:'5rem', bgcolor:'white', padding: 1}}/>
-        <Avatar src="/images/5.png" alt="nodeJs" sx={{width:'5rem', height:'5rem', bgcolor:'white', padding: 1}}/>
+        <Avatar
+          src="/images/1.png"
+          alt="html"
+          sx={{ width: "5rem", height: "5rem", bgcolor: "white", padding: 1 }}
+        />
+        <Avatar
+          src="/images/2.png"
+          alt="css"
+          sx={{ width: "5rem", height: "5rem", bgcolor: "white", padding: 1 }}
+        />
+        <Avatar
+          src="/images/3.png"
+          alt="javascript"
+          sx={{ width: "5rem", height: "5rem", bgcolor: "white", padding: 1 }}
+        />
+        <Avatar
+          src="/images/4.png"
+          alt="react"
+          sx={{ width: "5rem", height: "5rem", bgcolor: "white", padding: 1 }}
+        />
+        <Avatar
+          src="/images/5.png"
+          alt="nodeJs"
+          sx={{ width: "5rem", height: "5rem", bgcolor: "white", padding: 1 }}
+        />
       </AnimatedAvatars>
+        </Box>
       
-      </>
+    </>
   );
 }
 

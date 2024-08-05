@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Typography,
-  Button,
-  TextField,
-  Grid,
-} from "@mui/material";
+import { Box, Typography, Button, TextField, Grid } from "@mui/material";
 import emailjs from "emailjs-com";
 
-const Footer=()=> {
+const Footer = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -37,14 +31,13 @@ const Footer=()=> {
     }
   };
 
-
   return (
-    <Box sx={{ width: "100%", padding: 4, backgroundColor: "#fff" }}>
+    <Box sx={{ width: "100%", backgroundColor: "#fff" }}>
       <Typography variant="h4" gutterBottom sx={{ textAlign: "center" }}>
         Take a coffee & chat with me
       </Typography>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Box
             sx={{
               display: "flex",
@@ -52,6 +45,8 @@ const Footer=()=> {
               bgcolor: "#fef4f5",
               borderRadius: "1rem",
               padding: "1rem",
+              width: { xs: "100%", sm: "75%"},
+              marginLeft:{ xs: 7}
             }}
           >
             <img
@@ -69,7 +64,7 @@ const Footer=()=> {
             </a>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Box
             sx={{
               display: "flex",
@@ -77,6 +72,8 @@ const Footer=()=> {
               bgcolor: "#edf2f8",
               borderRadius: "1rem",
               padding: "1rem",
+              width: { xs: "100%", sm: "75%"},
+              marginLeft:{ xs: 7}
             }}
           >
             <img
@@ -105,7 +102,10 @@ const Footer=()=> {
             alignItems: "center",
             flexDirection: "column",
             mt: 4,
-            "& .MuiTextField-root": { marginBottom: 2, width: "45rem" },
+            "& .MuiTextField-root": {
+              marginBottom: 2,
+              width: { xs: "100%", sm: "80%", md: "45rem" },
+            },
           }}
           noValidate
           autoComplete="off"
@@ -139,22 +139,20 @@ const Footer=()=> {
           </Button>
         </Box>
       ) : (
-
-          <Typography
+        <Typography
           variant="h4"
-            sx={{ width: "100%", textAlign:'center', mt:5 }}
-          >
-            Thank you for getting in touch!
-          </Typography>
-
+          sx={{ width: "100%", textAlign: "center", mt: 5 }}
+        >
+          Thank you for getting in touch!
+        </Typography>
       )}
-       <Box sx={{ textAlign: 'center', mt: 4}}>
-                <Typography variant="body2" color="text.secondary">
-                    ©2024 Jenny Zhang. All rights reserved.
-                </Typography>
-            </Box>
+      <Box sx={{ textAlign: "center", mt: 4 }}>
+        <Typography variant="body2" color="text.secondary">
+          ©2024 Jenny Zhang. All rights reserved.
+        </Typography>
+      </Box>
     </Box>
   );
-}
+};
 
 export default Footer;

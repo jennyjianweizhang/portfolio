@@ -10,7 +10,9 @@ const App = ({ Component, pageProps }) => {
       <Navbar />
       <NavigationDots />
       <div>
+        
         <Component {...pageProps} />
+        
       </div>
 
       {/* <Footer /> */}

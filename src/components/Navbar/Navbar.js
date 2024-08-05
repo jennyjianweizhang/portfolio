@@ -31,7 +31,7 @@ const Navbar = () => {
     }, [activeSection]);
 
     return (
-        <AppBar position="fixed" color="default" elevation={0} sx={{ maxWidth: '100vw', overflowX: 'hidden' }} className="app-bar">
+        <AppBar color="default" elevation={0} sx={{ maxWidth: '100vw', overflowX: 'hidden', position:'fixed', left: 0}} className="app-bar">
             <Toolbar sx={{ padding: '0 !important'}}>
                 <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:'center'}}>
                 <Button color="inherit" component="a" href="#home">Home</Button>

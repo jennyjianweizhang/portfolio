@@ -57,8 +57,8 @@ const Skills = () => {
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         {profiles.map((profile) => (
-          <Grid item xs={12} sm={6} md={4} key={profile.title}>
-            <ProfileItem sx={{mt:3, ml:10}} >
+          <Grid item xs={12} sm={12} md={4} key={profile.title}>
+            <ProfileItem sx={{mt:3}} >
               <img
                 src={profile.imageUrl}
                 alt={profile.title}

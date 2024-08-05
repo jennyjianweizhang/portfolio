@@ -82,7 +82,7 @@ const SkillsExperiences = () => {
             ))}
           </Grid>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ maxWidth: { xs: '100%', sm: '80%', md: '60%' }}}>
           <Typography variant="h6" gutterBottom>
             Experiences
           </Typography>
